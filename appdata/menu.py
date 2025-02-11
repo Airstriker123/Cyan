@@ -73,7 +73,7 @@ option_info_txt =  f"{cyan}[{white}I{cyan}]{white} " + option_info
 
 menu1 = f""" ┌─ {option_site_txt}                                                                                              {option_next_txt} ─┐
  ├─ {option_info_txt} ┌─────────────────┐                        ┌───────┐                           ┌───────────┐            │
- └─┬─────────┤ General tools   ├─────────┬──────────────┤ games ├──────────────┬────────────┤ Utilities ├────────────┴─
+ └─┬─────────┤ General tools   ├─────────┬──────────────┤ Study ├──────────────┬────────────┤ Utilities ├────────────┴─
    │         └─────────────────┘         │              └───────┘              │            └───────────┘
    ├─ {option_01_txt                    }├─ {option_07_txt                    }├─ {option_14_txt}
    ├─ {option_02_txt                    }├─ {option_08_txt                    }├─ {option_15_txt}
