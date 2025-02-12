@@ -88,7 +88,7 @@ def Slow(text):
         time.sleep(delai)
 
 def Continue():
-    input(f"{BEFORE + current_time_hour() + AFTER} {INFO} Press to continue -> " + reset)
+    input(f"{BEFORE + current_time_hour() + AFTER} {INFO} Press enter to continue -> " + reset)
 
 def Error(e):
     print(f"{BEFORE + current_time_hour() + AFTER} {ERROR} Error: {white}{e}", reset)
@@ -107,21 +107,5 @@ def ErrorChoice():
 def ErrorResponse():
     print(f"{BEFORE + current_time_hour() + AFTER} {ERROR} Invalid Response !", reset)
     time.sleep(3)
-    Reset()
-
-def ErrorEdge():
-    print(f"{BEFORE + current_time_hour() + AFTER} {ERROR} Edge not installed or driver not up to date !", reset)
-    time.sleep(3)
-    Reset()
-
-
-def ErrorPlateform():
-    print(f"{BEFORE + current_time_hour() + AFTER} {ERROR} Unsupported Platform !", reset)
-    time.sleep(3)
-    Reset()
-
-def ErrorModule(e):
-    print(f"{BEFORE + current_time_hour() + AFTER} {ERROR} Error Module: {white}{e}", reset)
-    Continue()
     Reset()
 
