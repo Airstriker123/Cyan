@@ -1,23 +1,52 @@
 body {
     font-family: Arial, sans-serif;
+    background: url("images/bg.gif") no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(255, 255, 255);
     text-align: center;
-    background-color: #f4f4f4;
 }
-h1, h2 {
-    color: #333;
+.title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px black;
+}
+input, button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
 }
 button {
-    cursor: pointer;
-    background-color: red;
+    background-color: rgb(0, 102, 102);
     color: white;
-    border: none;
-    padding: 5px 10px;
-    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
-form {
-    margin-top: 10px;
+button:hover {
+    background-color: rgb(0, 182, 185);
 }
-input {
-    padding: 5px;
-    margin: 5px;
+
+.calendar {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    border-collapse: collapse;
 }
+
+.calendar th, .calendar td {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calendar td {
+    transition: background 0.3s ease;
+}
+
+/* Colors for different dates */
+.calendar td[style*="red"] { color: rgb(187, 0, 255); }
+.calendar td[style*="green"] { color: rgb(255, 0, 0); }
+.calendar td[style*="yellow"] { color: yellow; }
+.calendar td[style*="cyan"] { color: cyan; font-weight: bold; }
+

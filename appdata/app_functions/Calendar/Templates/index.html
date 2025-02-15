@@ -9,14 +9,27 @@
 <body>
     <h1>📅 Calendar Tracker
     </h1>
-    <div class="calendar">
-        <pre>{{ calendar }}</pre>
-    </div>
+    <table class="calendar">
+        <tr>
+            <th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th><th>Su</th>
+        </tr>
+        {% for week in calendar %}
+        <tr>
+            {% for day in week %}
+            {% if day %}
+                <td style="color: {{ day.color }}">{{ day.day }}</td>
+            {% else %}
+                <td></td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
 
-    <h2>Tracked Assessments</h2>
+    <h2>To do:</h2>
     <ul id="assessmentList">
         {% for a in assessments %}
-            <li>{{ a.name }} - {{ a.date }} <button onclick="deleteAssessment('{{ a.date }}')">❌</button></li>
+            <li>{{ a.name }} - {{ a.date }} - {{ a.reminder }}<button onclick="deleteAssessment('{{ a.date }}')">❌</button></li>
         {% endfor %}
     </ul>
 
@@ -24,6 +37,7 @@
     <form id="addForm">
         <input type="text" id="name" placeholder="Assessment Name" required>
         <input type="text" id="date" placeholder="DD-MM-YYYY" required>
+        <input type="text" id="reminder" placeholder="Do math hw" required>
         <button type="submit">Add</button>
     </form>
 

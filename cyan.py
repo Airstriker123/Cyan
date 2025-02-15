@@ -1,8 +1,3 @@
-import sys
-import os
-import json
-import subprocess
-import time
 from appdata.menu import *
 from appdata.functions import *
 from appdata.banner import *

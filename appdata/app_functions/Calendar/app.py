@@ -2,15 +2,16 @@ from flask import Flask, render_template, request, jsonify
 import json
 import webbrowser
 import threading
-import socket  # For getting local IP
+import socket
 from datetime import datetime
 import calendar
+
 
 app = Flask(__name__)
 
 DATA_FILE = "data.json"
 
-# Load tracked assessments
+
 def load_data():
     try:
         with open(DATA_FILE, "r") as file:
@@ -18,18 +19,45 @@ def load_data():
     except (FileNotFoundError, json.JSONDecodeError):
         return []
 
-# Save tracked assessments
+
 def save_data(data):
     with open(DATA_FILE, "w") as file:
         json.dump(data, file, indent=4)
 
+
 @app.route("/")
 def home():
-    today = datetime.now()
+    today = datetime.now().date()
     y, m = today.year, today.month
-    month_calendar = calendar.month(y, m)
     assessments = load_data()
-    return render_template("index.html", calendar=month_calendar, assessments=assessments)
+    assessment_dates = {a["date"] for a in assessments}
+    cal = calendar.monthcalendar(y, m)
+    colored_calendar = []
+
+    for week in cal:
+        row = []
+        for day in week:
+            if day == 0:
+                row.append("")
+                continue
+
+            date_str = f"{day:02d}-{m:02d}-{y}"
+            day_date = datetime(y, m, day).date()
+
+            if date_str in assessment_dates:
+                color = "cyan"
+            elif day_date < today:
+                color = "red"
+            elif day_date == today:
+                color = f"green"
+            else:
+                color = "yellow"
+
+            row.append({"day": day, "color": color})
+        colored_calendar.append(row)
+
+    return render_template("index.html", calendar=colored_calendar, assessments=assessments)
+
 
 @app.route("/add", methods=["POST"])
 def add_assessment():
