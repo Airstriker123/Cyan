@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar Tracker</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <h1>📅 Calendar Tracker</h1>
 </head>
 <body>
-    <h1>📅 Calendar Tracker
-    </h1>
     <table class="calendar">
         <tr>
             <th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th><th>Su</th>
@@ -25,7 +24,6 @@
         </tr>
         {% endfor %}
     </table>
-
     <h2>To do:</h2>
     <ul id="assessmentList">
         {% for a in assessments %}

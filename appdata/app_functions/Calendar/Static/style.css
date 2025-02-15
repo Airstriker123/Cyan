@@ -26,12 +26,6 @@ button:hover {
     background-color: rgb(0, 182, 185);
 }
 
-.calendar {
-    width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-    border-collapse: collapse;
-}
 
 .calendar th, .calendar td {
     padding: 10px;
@@ -50,3 +44,20 @@ button:hover {
 .calendar td[style*="yellow"] { color: yellow; }
 .calendar td[style*="cyan"] { color: cyan; font-weight: bold; }
 
+.calendar-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 50vh; /* Adjust height to move it properly */
+    flex-direction: column; /* Stack elements */
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
