@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2d36147-a7dc-4f93-9493-12c6ed9dbdff" name="Changes" comment="calender v1 (useless)">
-      <change afterPath="$PROJECT_DIR$/appdata/app_functions/Calendar/Static/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appdata/app_functions/Calendar.py" beforeDir="false" afterPath="$PROJECT_DIR$/appdata/app_functions/Calendar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appdata/app_functions/Calendar/Static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/appdata/app_functions/Calendar/Static/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appdata/app_functions/Calendar/Static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/appdata/app_functions/Calendar/Static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appdata/app_functions/Calendar/Templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/appdata/app_functions/Calendar/Templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appdata/app_functions/Calendar/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/appdata/app_functions/Calendar/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cyan.py" beforeDir="false" afterPath="$PROJECT_DIR$/cyan.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,19 +38,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Python.Calendar.executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.cyan.executor&quot;: &quot;Run&quot;,
-    &quot;Python.menu.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.customizations&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.Calendar.executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.cyan.executor": "Run",
+    "Python.menu.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Amit Singh/Downloads/cyan/appdata/app_functions/Calendar/Static",
+    "settings.editor.selected.configurable": "preferences.customizations"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Amit Singh\Downloads\cyan\appdata\app_functions\Calendar\Static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Amit Singh\Downloads\cyan" />
     </key>
@@ -154,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739360455983</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="calender v1 (useless)">
+      <option name="closed" value="true" />
+      <created>1739605881025</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1739605881025</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
