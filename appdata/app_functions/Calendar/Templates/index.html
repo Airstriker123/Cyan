@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>📅 Calendar Tracker
+    </h1>
+    <div class="calendar">
+        <pre>{{ calendar }}</pre>
+    </div>
+
+    <h2>Tracked Assessments</h2>
+    <ul id="assessmentList">
+        {% for a in assessments %}
+            <li>{{ a.name }} - {{ a.date }} <button onclick="deleteAssessment('{{ a.date }}')">❌</button></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Add Assessment</h2>
+    <form id="addForm">
+        <input type="text" id="name" placeholder="Assessment Name" required>
+        <input type="text" id="date" placeholder="DD-MM-YYYY" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <button onclick="deleteAll()">❌ Delete All</button>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

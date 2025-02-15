@@ -7,6 +7,7 @@ from appdata.menu import *
 from appdata.functions import *
 from appdata.banner import *
 
+
 sys.stdout.reconfigure(encoding='utf-8')
 def main():
     while True:
