@@ -1,0 +1,12 @@
+colorama>=0.4.6
+pytubefix
+pydub
+ffmpeg
+imageio[ffmpeg]
+fade
+Flask
+pyinstaller
+requests
+Pillow
+rich
+
