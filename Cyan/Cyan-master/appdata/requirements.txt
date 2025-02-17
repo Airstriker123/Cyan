@@ -1,0 +1,12 @@
+setuptools
+colorama
+pytubefix
+pydub
+ffmpeg
+imageio[ffmpeg]
+fade
+Flask
+pyinstaller
+requests
+Pillow
+audioop-lts
