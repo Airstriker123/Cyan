@@ -40,6 +40,8 @@ def app():
  {cyan}└─{lc}> {reset}""")
 
     try:
+        if choice in ['Help', 'I', 'H', 'INFO', 'info',]:
+            sys.exit()
         if choice in ['alt+f4', 'exit', 'leave', 'end', 'LETMEGO', 'DELETEMETHERE', 'EXITAPP', 'exitapp']:
             sys.exit()
         if choice in ['R', 'r', 'reset', 'refresh', 'clear']:
