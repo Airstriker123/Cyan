@@ -40,7 +40,7 @@ def MainColor2(text):
 
     return "\n".join(result)
 
-AI = MainColor2gpt = MainColor2(r"""                                                                                         
+AI =  MainColor2(r"""                                                                                         
                                                                                              
                                    :@@@@@@@@@@@@@@=                                          
                                  @@@@@@@@@@@@@@@@@@@@.                                       
