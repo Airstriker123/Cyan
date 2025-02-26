@@ -1,9 +1,9 @@
-from appdata.menu import *
-from appdata.functions import *
+from appdata.menu import * # import menu.py file
+from appdata.functions import * # imports other python files to reduce lines
 from appdata.banner import *
 from appdata.guide import *
-from appdata.welcome import *
-from appdata.Credits import *
+from appdata.welcome import * 
+from appdata.Credits import * 
 
 welcome_flag_path = os.path.join("appdata", "Welcome_complete.txt")
 sys.stdout.reconfigure(encoding='utf-8')
