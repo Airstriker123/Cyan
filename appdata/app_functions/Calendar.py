@@ -83,6 +83,7 @@ cal = MainColor2(r"""
 """)
 
 Slow(cal)
+#from calendar open app.pt (flask app)
 file_path = os.path.abspath("appdata/app_functions/Calendar/app.py")
 print(f'{red}If python requests permmisions please click yes in order for the app to work. {purple}(retry this option if an error occurs)')
 input(f'{yellow}press enter to launch app: ')
