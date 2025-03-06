@@ -38,7 +38,7 @@ def MainColor2(text):
 
     return "\n".join(result)
 
-
+# amazing acii art for banner
 note = MainColor2(r"""                          
                                                                                     
                      ███                                                                          
@@ -94,4 +94,5 @@ note = MainColor2(r"""
 Slow(note)
 # to lazy to make a function zzzzzzzzzzzzz
 # also to lazy to make it look better -_-
+#opens chrome
 webbrowser.open('https://www.geeksforgeeks.org/list-of-physics-formulas/')
