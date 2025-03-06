@@ -8,6 +8,7 @@ import sys
 import datetime
 import sys
 import requests
+# contains most of functions and other features needed for my app 
 
 color = colorama.Fore
 red = color.RED
@@ -17,9 +18,12 @@ reset = color.RESET
 blue = color.BLUE
 yellow = color.YELLOW
 
+# no i am not stealing you information (i am) THAT WAS A JOKE
+# gets pc name
 try: username_pc = os.getlogin()
 except: username_pc = "username"
 
+# does this even work? i don't know tbh
 try:
     if sys.platform.startswith("win"):
         os_name = "Windows"
@@ -56,12 +60,13 @@ GEN_INVALID = f'{BEFORE}x{AFTER} |'
 
 INFO_ADD = f'{white}[{red}+{white}]{red}'
 
+#delete printed messages in terminal 
 def Clear():
     if os_name == "Windows":
         os.system("cls")
     elif os_name == "Linux":
         os.system("clear")
-
+# i don't need this but I am keeping it 
 def Reset():
     if os_name == "Windows":
         file = ['python', os.path.join(tool_path, "cyan.py")]
@@ -70,7 +75,7 @@ def Reset():
     elif os_name == "Linux":
         file = ['python3', os.path.join(tool_path, "cyan.py")]
         subprocess.run(file)
-
+# i don't need this but I am keeping it 
 def StartProgram(program):
     if os_name == "Windows":
         file = ['python', os.path.join(tool_path, "Program", program)]
@@ -79,17 +84,17 @@ def StartProgram(program):
     elif os_name == "Linux":
         file = ['python3', os.path.join(tool_path, "Program", program)]
         subprocess.run(file)
-
+# I love animated text!
 def Slow(text):
-    delai = 0.03
+    delai = 0.03 # 30ms delay lower valuie = faster print
     lignes = text.split('\n')
     for ligne in lignes:
         print(ligne)
         time.sleep(delai)
-
+# to avoid terminal resets in 0ms the user needs to press enter to reset
 def Continue():
     input(f"{BEFORE + current_time_hour() + AFTER} {INFO} Press enter to continue -> " + reset)
-
+#errors
 def Error(e):
     print(f"{BEFORE + current_time_hour() + AFTER} {ERROR} Error: {white}{e}", reset)
     Continue()
@@ -108,7 +113,7 @@ def ErrorResponse():
     print(f"{BEFORE + current_time_hour() + AFTER} {ERROR} Invalid Response !", reset)
     time.sleep(3)
     Reset()
-
+# makes menu have a cyan gradient to match app 
 def MainColor(menu1):
     start_color = (0, 200, 150)
     end_color = (0, 255, 255)
