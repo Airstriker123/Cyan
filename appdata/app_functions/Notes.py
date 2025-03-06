@@ -3,7 +3,7 @@ import webbrowser
 import subprocess
 import sys
 import time
-
+# same code as essay/flash cards 
 
 def Slow(text, delay=0.03):
     for line in text.split("\n"):
