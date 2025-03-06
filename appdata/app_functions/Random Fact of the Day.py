@@ -1,5 +1,5 @@
 import requests
-import webbrowser
+import webbrowser #api!
 from colors_app import *
 import time
 
@@ -74,6 +74,7 @@ def random_fact():
     Slow(fc)
     print(f'{yellow}Fetching fact please wait...')
     try:
+        #api we love api!
         response = requests.get("https://uselessfacts.jsph.pl/random.json?language=en")
         if response.status_code == 200:
             fact = response.json()["text"]
