@@ -81,7 +81,7 @@ menu1 = f""" ┌─{option_site_txt}                                            
 
 """
 #gradient again (functions.py refused to import)
-# python is weird
+# 
 #--------------------------------------------------------------------------------#
 def MainColor(menu1):
     start_color = (0, 200, 150)  
