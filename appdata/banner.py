@@ -1,5 +1,7 @@
-import fade
+import fade # module for faded text 
 from .functions import *
+
+# function prints banner 
 def banner():
 
     banner = """    
