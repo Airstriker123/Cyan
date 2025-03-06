@@ -1,7 +1,10 @@
 import json
 import os
 import sys
-
+ # this is why your terminal has a gif your welcome :) 
+# if you want to remove it open cyan type 16 and just press enter or delete the whole cyan folder or delete oledbg.gif  
+# This made me hate coding -_- so many errors 
+# my head hurts!!!!!!!!111!111
 
 image_path = os.path.abspath("appdata\oledbg.gif").strip()
 
@@ -13,6 +16,7 @@ else:
 
 
         settings_path = os.path.expanduser(
+            #default terminal path 
             r"~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json")
 
         if not os.path.exists(settings_path):
