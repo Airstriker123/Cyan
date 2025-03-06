@@ -3,14 +3,14 @@ import time
 from .colors import *
 import sys
 import time
-
+# same a welcome.py 
 def type_text(text, delay=0.05):
     for char in text:
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(delay)
     print()
-
+# same a welcome.py 
 def welcome():
     sys.stdout.write(f"{lc}Cyan🤖: {white}")
     type_text("Hello, welcome to Cyan! 😁🎉", 0.04)
@@ -18,7 +18,7 @@ def welcome():
     sys.stdout.write(f"{lc}Cyan🤖: {white}")
     type_text("Cyan is a multi-tool designed to help students with their HSC journey 📚👑", 0.05)
 
-
+# same a welcome.py 
 def help():
     sys.stdout.write(f"{lc}Cyan🤖: {white}")
     type_text("Cyan is a very simple and easy app to use!", 0.025)
