@@ -3,7 +3,7 @@ import requests
 from colors_app import *
 import time
 
-
+# API KEYS CONTAINED
 def Slow(text, delay=0.03):
     for line in text.split("\n"):
         print(line, flush=True)
@@ -78,7 +78,7 @@ dic = MainColor2(r"""
 
 
 """)
-
+# do not show these keys!
 api_keys = {
     "163e456ed8e04d0fae7175b2cc658bde",
     "18a044c6953047519763a05c80c9379f",
@@ -88,6 +88,8 @@ api_keys = {
 }
 
 api_url = "https://api.aimlapi.com/v1/chat/completions"
+#define sends prompt to ai asking what it means
+# fastest and best way to create this
 define = "What does this word mean?"
 thesaurus = "Also what give a thesaurus of the word"
 def send_message(user_message):
@@ -98,10 +100,10 @@ def send_message(user_message):
     payload = {
         "model": "gpt-3.5-turbo",
         "messages": [
-            {"role": "user", "content": f"{define}  {user_message} {thesaurus}"}
+            {"role": "user", "content": f"{define}  {user_message} {thesaurus}"} #prompt
         ]
     }
-
+# cycles through keys
     for api_key in api_keys:
         try:
             response = requests.post(api_url, headers={
@@ -126,7 +128,7 @@ def send_message(user_message):
 
 
 # rest
-
+#main function
 def Personal_Dictionary():
     Slow(dic)
     print(
