@@ -2,13 +2,14 @@
 #ai chatbot v2
 #snake game??
 #calender/assignments
+# my plans not all made 
 
 
-from .colors import *
+from .colors import * # import files rather than fucntions just import the whole file!
 from .functions import *
 
 
-
+# option names
 option_01 = "Google-Classroom" #1
 option_02 = "ChatGPT (Web-Version)" #@
 option_03 = "GitHub" ##@
@@ -33,7 +34,7 @@ option_next = "Credits"
 option_site = "clear"
 option_info = "Help"
 
-
+# option display
 option_01_txt = f"{cyan}[{white}01{cyan}]{white} " + option_01.ljust(30)[:30].replace("-", " ")
 option_02_txt = f"{cyan}[{white}02{cyan}]{white} " + option_02.ljust(30)[:30].replace("-", " ")
 option_03_txt = f"{cyan}[{white}03{cyan}]{white} " + option_03.ljust(30)[:30].replace("-", " ")
@@ -65,7 +66,7 @@ option_info_txt =  f"{cyan}[{white}H{cyan}]{white} " + option_info
 
 
 
-
+#menu display
 menu1 = f""" ┌─{option_site_txt}                                                                                             {option_next_txt}─┐
  ├─{option_info_txt      }  ┌─────────────────┐                        ┌───────┐                           ┌───────────┐            │
  └─┬─────────┤ General tools   ├─────────┬──────────────┤ Study ├──────────────┬────────────┤ Utilities ├────────────┴─
@@ -79,6 +80,9 @@ menu1 = f""" ┌─{option_site_txt}                                            
                                          └─ {option_13_txt                    }
 
 """
+#gradient again (functions.py refused to import)
+# python is weird
+#--------------------------------------------------------------------------------#
 def MainColor(menu1):
     start_color = (0, 200, 150)  
     end_color = (0, 255, 255)     
