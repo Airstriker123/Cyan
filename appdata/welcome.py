@@ -100,7 +100,7 @@ def welcome():
     type_text("Cyan is a multi-tool designed to help students with their HSC journey! 📚👑 \n", 0.05)
 
 
-
+# welcome func
 def first_time_run():
 
     banner = """    
