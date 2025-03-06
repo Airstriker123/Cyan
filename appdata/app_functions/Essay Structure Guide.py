@@ -40,7 +40,7 @@ def MainColor2(text):
 
     return "\n".join(result)
 
-
+# this looks bad
 fc = MainColor2(r"""
 π∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞               
 ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞              
@@ -93,6 +93,7 @@ fc = MainColor2(r"""
 ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞   
 """)
 Slow(fc)
+#simple ui
 print(f'''
 {green}Select options below:
 {lc}=========================================================================||
@@ -126,7 +127,7 @@ def base():
       {lc} -{white} Closing Thought
     """)
 
-
+# decides what to do when user enters input
 if x in ['1', 'one', 'first']:
     web()
 elif x in ['2', 'two', 'second']:
