@@ -41,14 +41,7 @@ def MainColor2(text):
 
 
 gpt = MainColor2(r"""
-                                                                                             
-                                                                                             
-                                                                                             
-                                                                                             
-                                                                                             
-                                                                                             
-                                                                                             
-                                                                                             
+                                                                         
                                                                                              
                                    :@@@@@@@@@@@@@@=                                          
                                  @@@@@@@@@@@@@@@@@@@@.                                       
@@ -83,16 +76,8 @@ gpt = MainColor2(r"""
                               *@@@@@@@@@@@@@           .@@@@@@                               
                                        :@@@@@@@@@@@@@@@@@@@@                                 
                                           =@@@@@@@@@@@@@@:                                   
-                                                                                             
-                                                                                             
-                                                                                             
-                                                                                             
-                                                                                             
-                                                                                             
-                                                                                             
-                                                                                             
-                                                                                    
+                                                                                
 """)
 Slow(gpt)
 print(f'{red}starting webbroswer{cyan}:{white} chatgpt')
-webbrowser.open('chatgpt.com')
+webbrowser.open('chatgpt.com') #open with webbroswer url - chatgpt.com
