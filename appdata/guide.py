@@ -25,7 +25,7 @@ def help():
     sys.stdout.write(f"{lc}Cyan🤖: {white}")
     type_text("Let's say you don't know what a word means, you can simply use the dictionary option to find it.", 0.025)
     sys.stdout.write(f"{lc}Cyan🤖: {white}[")
-    type_text(f"{red}09{white}] {yellow}Dictionary & Thesaurus, where {green}[09] {white}is the number you have to type to start the app :)", 0.025)
+    type_text(f"{red}09{white}] {yellow}Dictionary & Thesaurus, where {green}09 {yellow} or {green} 9 {white}is the number you have to type to start the app :)", 0.025)
     sys.stdout.write(f"{lc}Cyan🤖: {white}")
     type_text(f"Begin by typing the number {yellow}9{white} and pressing {red}Enter!", 0.025)
 
