@@ -126,7 +126,7 @@ def first_time_run():
               0.025)
     sys.stdout.write(f"{lc}Cyan🤖: {white}[")
     type_text(
-        f"{red}09{white}] {yellow}Dictionary & Thesaurus, where {green}[09] {white}is the number you have to type to start the app. 😊 \n",
+        f"{red}09{white}] {yellow}Dictionary & Thesaurus, where {green}09 {yellow}or{green} 9 {white}is the number you have to type to start the app. 😊 \n",
         0.025)
     sys.stdout.write(f"{lc}Cyan🤖: {white}")
     type_text(f"Begin by typing the number {yellow}9{white} and pressing {red}Enter! \n", 0.025)
