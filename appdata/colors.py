@@ -1,6 +1,8 @@
 import colorama
 from colorama import Fore, Style
 
+# color values
+# I REFUSE TO TYPE THIS EVERY TIME I WANT TO COLOR MY TEXT 
 color = colorama.Fore
 red = Fore.RED
 white = Fore.WHITE
