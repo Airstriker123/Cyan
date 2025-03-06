@@ -4,7 +4,9 @@ import sys
 import requests
 import json
 import time
-
+"""
+if you need comments check flashcards this is same code
+"""
 
 def Slow(text, delay=0.03):
     for line in text.split("\n"):
