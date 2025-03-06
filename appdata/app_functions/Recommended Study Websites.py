@@ -39,7 +39,8 @@ def MainColor2(text):
 
     return "\n".join(result)
 
-
+# is that a minion studying?
+#app banner
 study = MainColor2(r"""                          
                                          ::::::::::::::::::::                                        
                                    ::::::::::::::::::::::::::::-:                                   
@@ -97,6 +98,7 @@ study = MainColor2(r"""
                                                ++++++                                               
                                                                                                          
 """)
+#list of websites
 STUDY_WEBSITES = {
     "Khan Academy": "https://www.khanacademy.org",
     "Physics Classroom": "https://www.physicsclassroom.com",
