@@ -5,7 +5,7 @@ import requests
 import json
 import time
 """
-if you need comments check flashcards this is same code
+if you need comments check essay structure guide this is same code
 """
 
 def Slow(text, delay=0.03):
