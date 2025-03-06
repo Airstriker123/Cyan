@@ -85,4 +85,4 @@ git = MainColor2(r"""
 Slow(git)
 
 print(f'{red}starting webbroswer{cyan}:{white} Github')
-webbrowser.open('github.com')
+webbrowser.open('github.com') #open github with browser
