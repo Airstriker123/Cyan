@@ -4,13 +4,13 @@ import webbrowser
 from colors_app import *
 import time
 
-
+#animation
 def Slow(text, delay=0.03):
     for line in text.split("\n"):
         print(line, flush=True)
         time.sleep(delay)
 
-
+#color settings
 def MainColor2(text):
     start_color = (0, 200, 150)
     end_color = (0, 255, 255)
@@ -41,7 +41,7 @@ def MainColor2(text):
 
     return "\n".join(result)
 
-
+#banner
 alarm = MainColor2(r"""
                                                                              
                                                                              
@@ -86,6 +86,8 @@ alarm = MainColor2(r"""
                                                                              
                                                                              
 """)
+# slow = print 
+#print alarm
 Slow(alarm)
 print(f'{red}Starting {green}windows alarm app:')
 os.system("start ms-clock:")
