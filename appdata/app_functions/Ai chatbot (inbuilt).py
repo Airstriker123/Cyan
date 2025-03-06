@@ -1,9 +1,10 @@
-from colors_app import *
-import json
-import requests
+from colors_app import * #colors
+import json  #json writing
+import requests #web requests/packets
 import time
 import sys
 
+#animation
 def Slow(text, delay=0.03):
     for line in text.split("\n"):
         print(line, flush=True)
@@ -40,6 +41,7 @@ def MainColor2(text):
 
     return "\n".join(result)
 
+#banner
 AI =  MainColor2(r""" 
        .---:                                                                             .:--:.     
      :*******-                                                                         .*******=.   
@@ -95,7 +97,7 @@ AI =  MainColor2(r"""
 
 """)
 
-
+# I should obfuscate the keys 
 api_keys = {
     "163e456ed8e04d0fae7175b2cc658bde",
     "18a044c6953047519763a05c80c9379f",
@@ -115,14 +117,17 @@ def send_message(user_message):
     if not user_message:
         print("Error: No message entered.")
         return
-
+#tells the ai what to do sends users prompt to api and ai returns to answer to api which sends it back to user terminal
     payload = {
         "model": "gpt-3.5-turbo",
         "messages": [
             {"role": "user", "content": user_message}
         ]
     }
-
+# 1 api key = 20 prompts
+    #solve this by creating more
+    # about 100 prompts per day
+    # function to cycle if 1 is invalid
     for api_key in api_keys:
         try:
             response = requests.post(api_url, headers={
@@ -149,7 +154,7 @@ def send_message(user_message):
 
 
 # rest
-
+#cyan msg to client
 def Cyam_AI():
     Slow(AI)
     print(
