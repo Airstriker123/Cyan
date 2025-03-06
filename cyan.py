@@ -1,17 +1,19 @@
 from appdata.menu import * # import menu.py file
 from appdata.functions import * # imports other python files to reduce lines
 from appdata.banner import *
-from appdata.guide import *
-from appdata.welcome import * 
+from appdata.guide import *   # I got so much errors from trying to import files into parent file (cyan.py)
+from appdata.welcome import *  # fixed by adding a dot ;)
 from appdata.Credits import * 
 
 welcome_flag_path = os.path.join("appdata", "Welcome_complete.txt")
 sys.stdout.reconfigure(encoding='utf-8')
 
-if not os.path.exists(welcome_flag_path):
+# if welcome_complete does not exist in path welcome user to app
+if not os.path.exists(welcome_flag_path): 
     first_time_run()
     with open(welcome_flag_path, "w") as file:
         file.write("shown")
+# main function/app executed into terminal 
 def main():
     while True:
         Clear()
@@ -20,7 +22,7 @@ def main():
         app()
         input(f"{BEFORE + current_time_hour() + AFTER} {INFO} Press enter to clear menu -> {reset} " + reset)
 
-
+# used if user types help
 def continuemain():
     while True:
         input(f"{BEFORE + current_time_hour() + AFTER} {INFO} Press enter to continue -> {reset} " + reset)
@@ -32,6 +34,8 @@ def ErrorChoiceStart():
     print(f"\n{BEFORE + current_time_hour() + AFTER} {ERROR} Invalid Choice !", reset)
     time.sleep(1)
 
+# inputs functions
+# get input from user 
 def app():
     options = {
         '01': option_01, '02': option_02, '03': option_03, '04': option_04,
@@ -83,7 +87,7 @@ def app():
     except Exception as e:
         print(f"Error: {e}")
 
-
+#run main function
 main()
 #continuemain()
-#complete!
+# This took a month to make I am not lying -_-
