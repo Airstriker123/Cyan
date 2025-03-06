@@ -1,5 +1,5 @@
 import requests
-from spellchecker import SpellChecker
+from spellchecker import SpellChecker # 99% of work right here on line 2
 from colors_app import *
 import time
 
@@ -114,7 +114,7 @@ def check_spelling_grammar():
             print(f"{green}- {word} → {correction if correction else 'No suggestion'}")
     else:
         print(f"✅{green} No spelling errors found!")
-      #bad api ngl  should use ai instead -_-
+      #bad api should use ai api instead -_-
       #to lazy to implement ai again -_-
     api_url = "https://api.languagetool.org/v2/check"
     params = {"text": text, "language": "en-US"}
