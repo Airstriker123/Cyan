@@ -1,7 +1,7 @@
 from colors_app import *
 import time
 
-
+#simple math calculator/solver using my own ui
 def Slow(text, delay=0.03):
     for line in text.split("\n"):
         print(line, flush=True)
@@ -83,12 +83,12 @@ def math_solver():
 
     while True:
         expression = input(f"\n{yellow}Enter a math expression {lc}(e.g., 5+3*2): {white}")
-
-        # Exit condition
+on
         if expression.lower() == "exit":
             print(f"{red}Exiting Math Solver...{reset}")
             break
 
+        # Exit conditi
         try:
             result = eval(expression, {"__builtins__": None}, {})  # Restrict eval usage
             print(f"{lc}Result:{white} {result}")
