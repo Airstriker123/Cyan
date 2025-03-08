@@ -6,9 +6,8 @@ import requests
 console = Console()  #console function from somewhere in richs files
 
 # WOAH IS THAT A DISCORD WEBHOOK!!1!!!!!!!11111
-# dc-api-key-sender-feedback
 #sends me users feedback if they have any
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1342459198738530356/_C7tE93oc0XcLbXeIf7n4QR9zc5bXsuFYIHqplL3SBokc0zaNv9BmN0UY6gzDIlyCudD"
+WEBHOOK = "https://discord.com/api/webhooks/1342459198738530356/_C7tE93oc0XcLbXeIf7n4QR9zc5bXsuFYIHqplL3SBokc0zaNv9BmN0UY6gzDIlyCudD"
 
 def animated_list(items, delay=0.1):
     """Prints an animated list with bullet points.
@@ -27,9 +26,9 @@ def send_feedback(feedback):
     if not feedback.strip():
         console.print("[bold red]No feedback provided😭. Returning to menu.[/]")
         return
-
+#push content to webhook
     data = {"content": f"📢 **User Feedback**:\n{feedback}"}
-    response = requests.post(DISCORD_WEBHOOK_URL, json=data)
+    response = requests.post(WEBHOOK, json=data)
 
     if response.status_code == 204:
         console.print("[bold green]✅ Feedback sent successfully![/]")
