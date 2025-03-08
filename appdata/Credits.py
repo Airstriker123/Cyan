@@ -5,7 +5,7 @@ import requests
 
 console = Console()  #console function from somewhere in richs files
 
-# WOAH IS THAT A DISCORD WEBHOOK!!1!!!!!!!11111
+
 #sends me users feedback if they have any
 WEBHOOK = "https://discord.com/api/webhooks/1342459198738530356/_C7tE93oc0XcLbXeIf7n4QR9zc5bXsuFYIHqplL3SBokc0zaNv9BmN0UY6gzDIlyCudD"
 
