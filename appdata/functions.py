@@ -18,12 +18,12 @@ reset = color.RESET
 blue = color.BLUE
 yellow = color.YELLOW
 
-# no i am not stealing you information (i am) THAT WAS A JOKE
+
 # gets pc name
 try: username_pc = os.getlogin()
-except: username_pc = "username"
+except: username_pc = "username" 
 
-# does this even work? i don't know tbh
+# does this even work? i don't know 
 try:
     if sys.platform.startswith("win"):
         os_name = "Windows"
@@ -32,7 +32,7 @@ try:
     else:
         os_name = "Unknown"
 except:
-    os_name = "None"
+    os_name = "???"
 
 tool_path = os.path.dirname(os.path.abspath(__file__)).split("Program\\")[0].strip()
 
