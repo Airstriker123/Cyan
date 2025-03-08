@@ -14,6 +14,7 @@ if not os.path.exists(welcome_flag_path):
     with open(welcome_flag_path, "w") as file:
         file.write("shown")
 # main function/app executed into terminal 
+# output
 def main():
     while True:
         Clear()
@@ -29,7 +30,7 @@ def continuemain():
         menu()
         app()
 
-
+#error message
 def ErrorChoiceStart():
     print(f"\n{BEFORE + current_time_hour() + AFTER} {ERROR} Invalid Choice !", reset)
     time.sleep(1)
@@ -50,7 +51,7 @@ def app():
     choice = input(
         f""" {cyan}┌──({purple}{username_pc}{cyan}@cyan{cyan})─{cyan}[{red}~/{os_name}/Menu-{menu_number}{cyan}]
  {cyan}└─{lc}> {reset}""")
-
+# checks input e.g if input is c execute credits function
     try:
         if choice in ['C', 'credits', 'author', 'c', 'CREDITS', 'Credits', 'CreDIts']:
             credits()
