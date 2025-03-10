@@ -155,7 +155,7 @@ def send_message(user_message):
 
 # rest
 #cyan msg to client
-def Cyam_AI():
+def Cyan_AI():
     Slow(AI)
     print(
         f'{green}Remember to type {red}exit {green} once you have completed your prompts!')
@@ -168,7 +168,7 @@ def Cyam_AI():
             break
         send_message(user_input)
 
-Cyam_AI()
+Cyan_AI()
 
 
 
