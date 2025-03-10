@@ -58,7 +58,7 @@ def app():
         if choice in ['Help', 'H', 'h', 'HELP', 'HeLp', '?', 'help']:
             help()
             continuemain()
-        if choice in ['alt+f4', 'exit', 'leave', 'end', 'LETMEGO', 'DELETEMETHERE', 'EXITAPP', 'exitapp']:
+        if choice in ['alt+f4', 'exit', 'leave', 'end', 'EXITAPP', 'exitapp']:
             sys.exit()
         if choice in ['R', 'r', 'reset', 'refresh', 'clear']:
             input(f"{BEFORE + current_time_hour() + AFTER} {INFO} Press enter to continue -> {reset} " + reset)
