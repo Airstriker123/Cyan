@@ -1,5 +1,6 @@
 @echo off
 color 2
+echo make sure you have the latest version of python!
 echo Installing Python modules... 
 color 2
 echo you can open cyan.py or start.bat if you opened this file before!)
