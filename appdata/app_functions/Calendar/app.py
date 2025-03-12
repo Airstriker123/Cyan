@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify #Backend modules
 import json
 import webbrowser
 import threading
@@ -9,10 +9,10 @@ import calendar
 
 app = Flask(__name__)
 
-DATA_FILE = "data.json"
+DATA_FILE = "data.json" #file name
 
 
-def load_data():
+def load_data(): #get data from data file
     try:
         with open(DATA_FILE, "r") as file:
             return json.load(file)
@@ -20,13 +20,13 @@ def load_data():
         return []
 
 
-def save_data(data):
+def save_data(data): #input data if user enters any
     with open(DATA_FILE, "w") as file:
         json.dump(data, file, indent=4)
 
 
 @app.route("/")
-def home():
+def home():  # display method also main page
     today = datetime.now().date()
     y, m = today.year, today.month
     assessments = load_data()
@@ -56,7 +56,7 @@ def home():
             row.append({"day": day, "color": color})
         colored_calendar.append(row)
 
-    return render_template("index.html", calendar=colored_calendar, assessments=assessments)
+    return render_template("index.html", calendar=colored_calendar, assessments=assessments) #html,css and js files to include
 
 
 @app.route("/add", methods=["POST"])
@@ -72,7 +72,7 @@ def add_assessment():
         return jsonify({"error": "Invalid date format! Use DD-MM-YYYY"}), 400
 
 @app.route("/delete", methods=["POST"])
-def delete_assessment():
+def delete_assessment(): #button to delete a certain assessment
     data = request.json
     assessments = load_data()
     assessments = [a for a in assessments if a["date"] != data["date"]]
@@ -80,20 +80,20 @@ def delete_assessment():
     return jsonify({"message": "Assessment deleted!"}), 200
 
 @app.route("/delete_all", methods=["POST"])
-def delete_all():
+def delete_all(): #delete all assessments data function
     save_data([])
     return jsonify({"message": "All assessments deleted!"}), 200
 
-def get_local_ip():
+def get_local_ip(): #for lan hosting
     hostname = socket.gethostname()
     return socket.gethostbyname(hostname)
 
 
-def open_browser():
+def open_browser(): #opens url for user
     ip = get_local_ip()
     url = f"http://{ip}:5000/"
     webbrowser.open(url)
 
-if __name__ == '__main__':
+if __name__ == '__main__': #main 
     threading.Timer(1.5, open_browser).start()
     app.run(host="0.0.0.0", port=5000, debug=True)
