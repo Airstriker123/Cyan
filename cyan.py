@@ -84,7 +84,7 @@ def app():
 
         else:
             ErrorChoiceStart()
-
+'''Prints error message e.g a filepath is not found in code or could not find a specific module.'''
     except Exception as e:
         print(f"Error: {e}")
 
