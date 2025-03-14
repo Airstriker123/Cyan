@@ -42,7 +42,7 @@ def show_credits():
     table.add_column("Use", justify="left")
     table.add_column("Link", justify="left")
     table.add_row(
-        "Rich", "Better CLI options, tables, etc.", "n/a"
+        "Rich", "Better CLI app, tables, etc.", "https://github.com/Textualize/rich"
     )
     console.print(table)
     console.print("\n[italic yellow]Thank you for using Cyan![/]\n")
