@@ -83,12 +83,11 @@ def math_solver():
 
     while True:
         expression = input(f"\n{yellow}Enter a math expression {lc}(e.g., 5+3*2): {white}")
-on
         if expression.lower() == "exit":
             print(f"{red}Exiting Math Solver...{reset}")
             break
 
-        # Exit conditi
+        # Exit conditiion
         try:
             result = eval(expression, {"__builtins__": None}, {})  # Restrict eval usage
             print(f"{lc}Result:{white} {result}")
