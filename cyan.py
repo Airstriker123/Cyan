@@ -12,7 +12,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 if not os.path.exists(welcome_flag_path): 
     first_time_run()
     with open(welcome_flag_path, "w") as file:
-        file.write("shown")
+        file.write("Completed=True")
 # main function/app executed into terminal 
 # output
 def main():
