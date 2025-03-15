@@ -255,4 +255,4 @@ try:
     formatted_links = format_links(links)
     Slow(study + MainColor2(formatted_links))
 except Exception as e:
-    print(f'error:{e}')
+    print(f'{red}error: {purple}{e}')
