@@ -99,11 +99,12 @@ AI =  MainColor2(r"""
 
 # I should obfuscate the keys 
 api_keys = {
-    "163e456ed8e04d0fae7175b2cc658bde",
-    "18a044c6953047519763a05c80c9379f",
-    "a5271f71f5354b03939e0b648a74eb98",
+    "3f493a0d62df472bbe2efda6d4b2bbf9",
     "451d904cff5b4e25886acbef9d58d42d",
-    "aaef4a4975cf4f67a4932899fb228435",
+    "fdef3c79fa85472f8ae5a88882ef0bdc",
+    "e7b4aaffb85f466e92c374d92cba75af",
+    "78621e4ee5154de18617765dc7ae2001",
+    "e7711e86290a454c99431fd3f2e1a4d1",
 }
 api_url = "https://api.aimlapi.com/v1/chat/completions"
 
