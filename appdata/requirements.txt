@@ -16,3 +16,4 @@ jsons
 pypi-json
 textblob
 pyspellchecker
+sympy
