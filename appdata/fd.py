@@ -63,9 +63,36 @@ else:
 
             with open(settings_path, "w", encoding="utf-8") as file:
                 json.dump(settings, file, indent=4)
-            print("✅ Terminal background updated for all profiles and default profile! Restart Windows Terminal to see changes.")
+            print(r"""{green}
+ ░▒▓███████▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓████████▓▒░░▒▓███████▓▒░▒▓███████▓▒░▒▓█▓▒░ 
+░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░     ░▒▓█▓▒░      ░▒▓█▓▒░ 
+░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░     ░▒▓█▓▒░      ░▒▓█▓▒░ 
+ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓██████▓▒░  ░▒▓██████▓▒░░▒▓██████▓▒░░▒▓█▓▒░ 
+       ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░             ░▒▓█▓▒░     ░▒▓█▓▒░▒▓█▓▒░ 
+       ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░     ░▒▓█▓▒░       
+░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓████████▓▒░▒▓███████▓▒░▒▓███████▓▒░░▒▓█▓▒░  
+            """)
+            print(r"{green}✅ SUCCESS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")    
         else:
             print("⚠️ No changes were made.")
+            print(f"""{red}                                                                                                                         
+FFFFFFFFFFFFFFFFFFFFFF      AAA               IIIIIIIIIILLLLLLLLLLL             EEEEEEEEEEEEEEEEEEEEEEDDDDDDDDDDDDD         !!! 
+F::::::::::::::::::::F     A:::A              I::::::::IL:::::::::L             E::::::::::::::::::::ED::::::::::::DDD     !!:!!
+F::::::::::::::::::::F    A:::::A             I::::::::IL:::::::::L             E::::::::::::::::::::ED:::::::::::::::DD   !:::!
+FF::::::FFFFFFFFF::::F   A:::::::A            II::::::IILL:::::::LL             EE::::::EEEEEEEEE::::EDDD:::::DDDDD:::::D  !:::!
+  F:::::F       FFFFFF  A:::::::::A             I::::I    L:::::L                 E:::::E       EEEEEE  D:::::D    D:::::D !:::!
+  F:::::F              A:::::A:::::A            I::::I    L:::::L                 E:::::E               D:::::D     D:::::D!:::!
+  F::::::FFFFFFFFFF   A:::::A A:::::A           I::::I    L:::::L                 E::::::EEEEEEEEEE     D:::::D     D:::::D!:::!
+  F:::::::::::::::F  A:::::A   A:::::A          I::::I    L:::::L                 E:::::::::::::::E     D:::::D     D:::::D!:::!
+  F:::::::::::::::F A:::::A     A:::::A         I::::I    L:::::L                 E:::::::::::::::E     D:::::D     D:::::D!:::!
+  F::::::FFFFFFFFFFA:::::AAAAAAAAA:::::A        I::::I    L:::::L                 E::::::EEEEEEEEEE     D:::::D     D:::::D!:::!
+  F:::::F         A:::::::::::::::::::::A       I::::I    L:::::L                 E:::::E               D:::::D     D:::::D!!:!!
+  F:::::F        A:::::AAAAAAAAAAAAA:::::A      I::::I    L:::::L         LLLLLL  E:::::E       EEEEEE  D:::::D    D:::::D  !!! 
+FF:::::::FF     A:::::A             A:::::A   II::::::IILL:::::::LLLLLLLLL:::::LEE::::::EEEEEEEE:::::EDDD:::::DDDDD:::::D       
+F::::::::FF    A:::::A               A:::::A  I::::::::IL::::::::::::::::::::::LE::::::::::::::::::::ED:::::::::::::::DD    !!! 
+F::::::::FF   A:::::A                 A:::::A I::::::::IL::::::::::::::::::::::LE::::::::::::::::::::ED::::::::::::DDD     !!:!!
+FFFFFFFFFFF  AAAAAAA                   AAAAAAAIIIIIIIIIILLLLLLLLLLLLLLLLLLLLLLLLEEEEEEEEEEEEEEEEEEEEEEDDDDDDDDDDDDD         !!!      
+            """)
 
 
 
