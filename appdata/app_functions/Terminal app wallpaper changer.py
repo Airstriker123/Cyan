@@ -138,7 +138,7 @@ def change_windows_terminal_background(image_path):
         with open(settings_path, "w", encoding="utf-8") as file:
             json.dump(settings, file, indent=4)
         print(
-            f"✅{green} 
+            f"""✅{green} 
               
   ______   __    __   ______    ______   ________   ______    ______   __ 
  /      \ |  \  |  \ /      \  /      \ |        \ /      \  /      \ |  \
@@ -150,7 +150,7 @@ def change_windows_terminal_background(image_path):
  \$$    $$ \$$    $$ \$$    $$ \$$    $$| $$     \ \$$    $$ \$$    $$|  \
   \$$$$$$   \$$$$$$   \$$$$$$   \$$$$$$  \$$$$$$$$  \$$$$$$   \$$$$$$  \$$
     
-            ")
+            """)
     else:
         print(f"{purple}⚠️ No changes were made.")
         print(f"""{red}
