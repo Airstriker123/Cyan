@@ -1,8 +1,11 @@
 from colors_app import *
 import time
+import sympy as sp
+import re
+import math
 
-#simple math calculator/solver using my own ui
-def Slow(text, delay=0.03):
+
+def Slow(text, delay=0.02):
     for line in text.split("\n"):
         print(line, flush=True)
         time.sleep(delay)
@@ -21,7 +24,6 @@ def MainColor2(text):
         )
         for i in range(num_steps)
     ]
-
     colors += list(reversed(colors[:-1]))
 
     def text_color(r, g, b):
@@ -29,7 +31,6 @@ def MainColor2(text):
 
     result = []
     lines = text.split("\n")
-
     for i, line in enumerate(lines):
         color_index = i % len(colors)
         r, g, b = colors[color_index]
@@ -39,7 +40,33 @@ def MainColor2(text):
     return "\n".join(result)
 
 
-cal = MainColor2(r"""
+def safe_eval(expression):
+    expression = expression.replace('^', '**')
+    expression = re.sub(r'(\d+)!', r'math.factorial(\1)', expression)
+
+    allowed_funcs = {
+        "sin": sp.sin,
+        "cos": sp.cos,
+        "tan": sp.tan,
+        "sqrt": sp.sqrt,
+        "log": sp.log,
+        "ln": lambda x: sp.log(x, sp.E),
+        "exp": sp.exp,
+        "pi": sp.pi,
+        "e": sp.E,
+        "factorial": math.factorial,
+        "abs": abs,
+        "round": round
+    }
+    try:
+        result = sp.sympify(expression, locals=allowed_funcs).evalf()
+        return round(result, 10) if isinstance(result, (int, float)) else result
+    except Exception:
+        return "Invalid Expression"
+
+
+def math_solver():
+    cal = MainColor2("""
  █████████████████████████████████████
  █████████████████████████████████████
  █████████████████████████████████████
@@ -72,32 +99,19 @@ cal = MainColor2(r"""
  █████████████████████████████████████
  █████████████████████████████████████
  █████████████████████████████████████
-                                                                                                       
+
 """)
-
-
-def math_solver():
     Slow(cal)
     print(f"{yellow}Type {red}'exit' {yellow}to leave app!{reset}")
-    print(f"{red}Only use this for simple maths!")
+    print(f"{purple}Supports:{cyan} +, -, *, /, ^, !, sin(), cos(), tan(), sqrt(), log(), ln(), exp(), pi, e, abs(), round()")
 
     while True:
-        expression = input(f"\n{yellow}Enter a math expression {lc}(e.g., 5+3*2): {white}")
+        expression = input(f"\n{yellow}Enter a math expression {lc}(e.g., 5+3*2, 4!): {white}")
         if expression.lower() == "exit":
             print(f"{red}Exiting Math Solver...{reset}")
             break
 
-        # Exit conditiion
-        try:
-            result = eval(expression, {"__builtins__": None}, {})  # Restrict eval usage
-            print(f"{lc}Result:{white} {result}")
-        except Exception as e:
-            print(f"{red}Error:{white} {e}")
-
+        result = safe_eval(expression)
+        print(f"{lc}Result:{white} {result}")
 
 math_solver()
-
-
-
-
-
