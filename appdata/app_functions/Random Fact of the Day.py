@@ -74,7 +74,7 @@ def random_fact():
     Slow(fc)
     print(f'{yellow}Fetching fact please wait...')
     try:
-        #api we love api!
+        #In api we trust!
         response = requests.get("https://uselessfacts.jsph.pl/random.json?language=en")
         if response.status_code == 200:
             fact = response.json()["text"]
