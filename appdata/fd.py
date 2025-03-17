@@ -2,6 +2,7 @@ import json
 import os
 import sys
 import time
+from colors import *
  # this is why your terminal has a gif your welcome :) 
 # if you want to remove it open cyan type 16 and just press enter or delete the whole cyan folder or delete oledbg.gif  
 # This made me hate coding -_- so many errors 
