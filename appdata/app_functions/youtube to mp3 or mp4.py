@@ -103,9 +103,9 @@ def mp3():
             audio = AudioSegment.from_file(temp_file, format="m4a")
             audio.export(mp3_file, format="mp3")
             os.remove(temp_file)
-            print(f"{green}MP3 downloaded! Check the {red}'downloaded content' folder.")
+            print(f"{green}MP3/M4A downloaded! Check the {red}'downloaded content' folder.")
         except Exception as e:
-            print(f"{red}Error during conversion: {e}")
+            print(f'{lc}ignore errors!')
     except Exception as e:
         print(f"{red}Error: {e}")
 
