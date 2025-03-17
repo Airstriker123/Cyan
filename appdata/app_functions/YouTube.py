@@ -2,10 +2,6 @@ import webbrowser
 from colors_app import *
 import time
 
-import webbrowser
-from colors_app import *
-import time
-
 
 def Slow(text, delay=0.03):
     for line in text.split("\n"):
