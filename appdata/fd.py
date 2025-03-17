@@ -8,9 +8,14 @@ import sys
 
 image_path = os.path.abspath("appdata\oledbg.gif").strip()
 
+def Slow(text):
+    delai = 0.03
+    lignes = text.split('\n')
+    for ligne in lignes:
+        print(ligne)
+        time.sleep(delai)
 
-if not os.path.exists(image_path):
-    print(f"❌ Error: Image file '{image_path}' not found.")
+
 else:
     def change_windows_terminal_background(image_path):
 
