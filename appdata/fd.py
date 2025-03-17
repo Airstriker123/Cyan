@@ -14,8 +14,9 @@ def Slow(text):
     for ligne in lignes:
         print(ligne)
         time.sleep(delai)
-
-
+     
+if not os.path.exists(image_path):
+     print(f"❌ Error: Image file '{image_path}' not found.")
 else:
     def change_windows_terminal_background(image_path):
 
@@ -68,7 +69,7 @@ else:
 
             with open(settings_path, "w", encoding="utf-8") as file:
                 json.dump(settings, file, indent=4)
-            Slow(r"""{green}
+            banner = r"""{green}
  ░▒▓███████▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓████████▓▒░░▒▓███████▓▒░▒▓███████▓▒░▒▓█▓▒░ 
 ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░     ░▒▓█▓▒░      ░▒▓█▓▒░ 
 ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░     ░▒▓█▓▒░      ░▒▓█▓▒░ 
@@ -76,7 +77,8 @@ else:
        ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░             ░▒▓█▓▒░     ░▒▓█▓▒░▒▓█▓▒░ 
        ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░     ░▒▓█▓▒░       
 ░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓████████▓▒░▒▓███████▓▒░▒▓███████▓▒░░▒▓█▓▒░  
-            """)
+            """
+            Slow(banner)
             print(r"{green}✅ SUCCESS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")    
         else:
             print("⚠️ No changes were made.")
