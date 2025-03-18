@@ -5,7 +5,6 @@ ffmpeg
 imageio[ffmpeg]
 fade
 Flask
-pyinstaller
 requests
 Pillow
 rich
