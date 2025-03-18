@@ -6,7 +6,6 @@ imageio[ffmpeg]
 fade
 Flask
 requests
-Pillow
 rich
 PyExecJS
 datetime
