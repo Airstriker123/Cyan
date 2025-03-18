@@ -6,6 +6,7 @@ from rich.table import Table
 
 console = Console()
 
+#webhook url
 WEBHOOK = "https://discord.com/api/webhooks/1342459198738530356/_C7tE93oc0XcLbXeIf7n4QR9zc5bXsuFYIHqplL3SBokc0zaNv9BmN0UY6gzDIlyCudD"
 
 #function to print contributions
