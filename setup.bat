@@ -13,9 +13,7 @@ echo ffmpeg - A multimedia framework used for handling audio, video, and other m
 echo imageio[ffmpeg] - Enables reading and writing of images and videos, integrating ffmpeg.
 echo fade - Adds text fading effects in the console.
 echo Flask - A lightweight web framework for creating web applications.
-echo pyinstaller - Converts Python scripts into standalone executables.
 echo requests - A popular library for handling HTTP requests.
-echo Pillow - A powerful image processing library.
 echo rich - Provides rich text formatting for the console.
 echo PyExecJS - Allows running JavaScript code from Python.
 echo datetime - Handles date and time operations.
