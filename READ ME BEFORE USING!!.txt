@@ -11,5 +11,4 @@ NOTE: once you open setup once you do not have to open it again and can just ope
 NOTE: YouTube video (mp3/mp4) downloader might not work on the school
 network! (most likely because of proxy so use it on your own network and it should work fine.)
 
-Note: Tool made in python with exception of calendar made using python backend (flask) and HTML&CSS frontend.
 
