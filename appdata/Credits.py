@@ -69,5 +69,6 @@ def show_credits():
     feedback = console.input("[bold cyan]Got feedback? Type it here (or press Enter to skip): [/]")
     send_feedback(feedback)
 
+#function for cyan.py
 def credits():
     show_credits()
