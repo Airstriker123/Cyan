@@ -26,7 +26,7 @@ echo pyspellchecker - A simple spell-checking library.
 echo sympy - A symbolic mathematics library for algebraic computations.
 echo.
 color 2
-
+echo Note: This app depends on all of these modules to run
 choice /c YN /m "Do you want to install these modules?"
 if errorlevel 2 exit /b
 
