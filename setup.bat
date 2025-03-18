@@ -4,7 +4,6 @@ echo Make sure you have the latest version of Python!
 echo This script will install the required Python modules for your application.
 echo.
 
-:: Display module descriptions
 echo The following modules will be installed:
 echo.
 echo colorama - Provides color support for console text.
@@ -28,8 +27,8 @@ echo pyspellchecker - A simple spell-checking library.
 echo sympy - A symbolic mathematics library for algebraic computations.
 echo.
 
-:: Ask for confirmation
-choice /c YN /m "Do you want to install these modules? (Y/N)"
+
+choice /c YN /m "Do you want to install these modules?"
 if errorlevel 2 exit /b
 
 color 2
