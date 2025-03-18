@@ -8,11 +8,12 @@ console = Console()
 
 WEBHOOK = "https://discord.com/api/webhooks/1342459198738530356/_C7tE93oc0XcLbXeIf7n4QR9zc5bXsuFYIHqplL3SBokc0zaNv9BmN0UY6gzDIlyCudD"
 
+#function to print contributions
 def animated_list(items, delay=0.1):
     for item in items:
         console.print(f"[cyan]• {item}[/]", justify="left")
         time.sleep(delay)
-
+#function to submit feedback.
 def send_feedback(feedback):
     if not feedback.strip():
         console.print("[bold red]No feedback provided😭. Returning to menu.[/]")
@@ -23,7 +24,7 @@ def send_feedback(feedback):
         console.print("[bold green]✅ Feedback sent successfully![/]")
     else:
         console.print("[bold red]❌ Failed to send feedback.[/] Please try again later.")
-
+#main function 
 def show_credits():
     console.clear()
     console.print(Panel.fit("[bold magenta]Cyan - Multi-tool for Students[/]", style="cyan"))
@@ -36,9 +37,9 @@ def show_credits():
         "Programming: Amit Singh",
         "Tested on 3 computers 💯"
     ]
-    animated_list(contributions)
+    animated_list(contributions) #function printed
 
-    # Create Rich Table
+    # Create rich table for credits of modules used in project
     table = Table(show_header=True, header_style="bold magenta")
     table.add_column("Modules Used", style="cyan")
     table.add_column("Use", justify="left", style="yellow")
