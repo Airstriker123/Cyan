@@ -6,6 +6,7 @@ echo.
 
 echo The following modules will be installed:
 echo.
+color 3
 echo colorama - Provides color support for console text.
 echo pytubefix - A patched version of pytube for downloading YouTube videos.
 echo pydub - Handles audio processing, including conversion and manipulation.
@@ -24,7 +25,7 @@ echo textblob - A text processing library for natural language processing (NLP).
 echo pyspellchecker - A simple spell-checking library.
 echo sympy - A symbolic mathematics library for algebraic computations.
 echo.
-
+color 2
 
 choice /c YN /m "Do you want to install these modules?"
 if errorlevel 2 exit /b
