@@ -49,8 +49,8 @@ def app():
     menu_number = '1'
     username_pc = os.getlogin()
     choice = input(
-        f""" {cyan}┌──({purple}{username_pc}{cyan}@cyan{cyan})─{cyan}[{red}~/{os_name}/Menu-{menu_number}{cyan}]
- {cyan}└─{lc}> {reset}""")
+        f""" {lc}┌──({purple}{username_pc}{lc}@cyan{lc})─{lc}[{red}~/{os_name}/Menu-{menu_number}{lc}]
+ {lc}└─{lc}> {reset}""")
 # checks input e.g if input is c execute credits function
     try:
         if choice in ['C', 'credits', 'author', 'c', 'CREDITS', 'Credits', 'CreDIts']:
