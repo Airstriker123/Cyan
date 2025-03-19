@@ -81,7 +81,7 @@ cal = MainColor2(r"""
 
 """)
 Slow(cal)
-Slow("{purple}Opening google calendar...")
+Slow(f"{purple}Opening google calendar...")
 webbrowser.open("https://calendar.google.com/")
 
 
