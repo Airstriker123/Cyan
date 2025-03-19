@@ -81,8 +81,8 @@ cal = MainColor2(r"""
 
 """)
 Slow(cal)
-Slow("Opening google calendar...")
-os.open("https://calendar.google.com/")
+Slow("{purple}Opening google calendar...")
+webbrowser.open("https://calendar.google.com/")
 
 
 
