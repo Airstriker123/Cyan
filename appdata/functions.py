@@ -9,6 +9,8 @@ import datetime
 import sys
 import requests
 # contains most of functions and other features needed for my app 
+# now it stores most of the functions my app uses 
+#some are not used at all. (error functions)
 
 color = colorama.Fore
 red = color.RED
