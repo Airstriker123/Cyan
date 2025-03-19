@@ -1,7 +1,7 @@
 @echo off
 color 2
 echo Make sure you have the latest version of Python!
-echo This script will install the required Python modules for your application.
+echo This script will install the required Python modules that cyan depends on!
 echo.
 
 echo The following modules will be installed:
@@ -25,8 +25,7 @@ echo textblob - A text processing library for natural language processing (NLP).
 echo pyspellchecker - A simple spell-checking library.
 echo sympy - A symbolic mathematics library for algebraic computations.
 echo.
-color 2
-echo Note: This app depends on all of these modules to run
+
 choice /c YN /m "Do you want to install these modules?"
 if errorlevel 2 exit /b
 
