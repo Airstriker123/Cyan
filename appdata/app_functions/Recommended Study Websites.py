@@ -195,13 +195,6 @@ try:
             "Codecademy": "https://www.codecademy.com/",
             "GitHub": "https://github.com/"
         },
-        "Enterprise": {
-            "Harvard Business Review": "https://hbr.org/",
-            "Investopedia": "https://www.investopedia.com/",
-            "MIT OpenCourseWare - Business": "https://ocw.mit.edu/courses/sloan-school-of-management/",
-            "BBC Bitesize - Business": "https://www.bbc.co.uk/bitesize/subjects/zpsvr82",
-            "FutureLearn": "https://www.futurelearn.com/"
-        },
         "Enterprise Computing": {
             "IBM SkillsBuild": "https://www.ibm.com/training/skillsbuild",
             "Oracle Academy": "https://academy.oracle.com/",
