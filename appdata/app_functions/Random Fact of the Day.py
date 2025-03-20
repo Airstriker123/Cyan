@@ -75,8 +75,10 @@ def random_fact():
     print(f'{yellow}Fetching fact please wait...')
     try:
         #In api we trust!
+         # endpoint
         response = requests.get("https://uselessfacts.jsph.pl/random.json?language=en")
         if response.status_code == 200:
+        #extract text from api
             fact = response.json()["text"]
             print(f"\n{lc}Random Fact:{white} {fact}")
         else:
