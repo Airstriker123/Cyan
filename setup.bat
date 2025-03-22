@@ -42,6 +42,7 @@ if %errorlevel% neq 0 (
 )
 
 color 1
+:: open app 
 echo Starting app (cyan.py)
 python appdata/fd.py
 python cyan.py
