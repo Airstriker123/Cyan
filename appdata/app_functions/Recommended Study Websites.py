@@ -1,14 +1,15 @@
-from colors_app import *
-import time 
-import webbrowser
 
-#animation
+from colors_app import *
+import webbrowser
+import time
+
+
 def Slow(text, delay=0.03):
     for line in text.split("\n"):
         print(line, flush=True)
         time.sleep(delay)
 
-#colours for banner
+
 def MainColor2(text):
     start_color = (0, 200, 150)
     end_color = (0, 255, 255)
@@ -161,7 +162,6 @@ Slow(f"\n{blue}Recommended Study Websites:")
 display()
 open()
 '''
-# dictionary of links
 try:
     links = {
         "Physics": {
@@ -223,7 +223,7 @@ try:
     }
 
 
- def format_links(links):
+    def format_links(links):
         display_link = ""
 
         for category, sites in links.items():
@@ -250,4 +250,3 @@ try:
     Slow(study + MainColor2(formatted_links))
 except Exception as e:
     print(f'{red}error: {purple}{e}')
-
