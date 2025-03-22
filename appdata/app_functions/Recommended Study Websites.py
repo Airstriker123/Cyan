@@ -161,7 +161,7 @@ Slow(f"\n{blue}Recommended Study Websites:")
 display()
 open()
 '''
-try:
+try: #dictionary of links to use
     links = {
         "Physics": {
             "Khan Academy": "https://www.khanacademy.org/science/physics",
@@ -222,30 +222,44 @@ try:
     }
 
 
-    def format_links(links):
-        display_link = ""
+   # Function to format and display links with a hierarchical structure
+def format_links(links):
+    display_link = ""  # Initialize the string to hold the formatted output
 
-        for category, sites in links.items():
-            display_link += "\n" + MainColor2(category) + "\n"
+    # Loop through each category and its associated sites
+    for category, sites in links.items():
+        # Add the category name with color formatting
+        display_link += "\n" + MainColor2(category) + "\n"
 
-            def add_sites(prefix, sites_dict):
-                nonlocal display_link
-                for i, (site, url) in enumerate(sites_dict.items()):
-                    if isinstance(url, dict):
-                        display_link += f"{prefix}├─ {red + site}\n"
-                        add_sites(prefix + "│   ", url)
+        # Define a recursive function to handle nested site categories
+        def add_sites(prefix, sites_dict):
+            nonlocal display_link  # Allow modifying the outer variable display_link
+
+            # Loop through each site in the current category
+            for i, (site, url) in enumerate(sites_dict.items()):
+                if isinstance(url, dict):  # Check if the URL is a dictionary (indicating subcategories)
+                    display_link += f"{prefix}├─ {red + site}\n"  # Display the site name
+                    add_sites(prefix + "│   ", url)  # Recursively call add_sites for subcategories
+                else:
+                    # For the last site in the dictionary, use a different format to display
+                    if i == len(sites_dict) - 1:
+                        display_link += f"{prefix}└─ {red + site}: {white + url}" + "\n"
                     else:
-                        if i == len(sites_dict) - 1:
-                            display_link += f"{prefix}└─ {red + site}: {white + url}" + "\n"
-                        else:
-                            display_link += f"{prefix}├─ {red + site}: {white + url}" + "\n"
+                        display_link += f"{prefix}├─ {red + site}: {white + url}" + "\n"
 
-            add_sites("", sites)
+        # Call the add_sites function for the current category
+        add_sites("", sites)
 
-        return display_link
+    return display_link  # Return the formatted string containing all links
 
 
-    formatted_links = format_links(links)
-    Slow(study + MainColor2(formatted_links))
+# Format the links and store the result in formatted_links
+formatted_links = format_links(links)
+
+# Display the formatted links along with some additional text and a typewriter effect
+Slow(study + MainColor2(formatted_links))
+
+# Error handling block
 except Exception as e:
-    print(f'{red}error: {purple}{e}')
+    print(f'{red}error: {purple}{e}')  # Print any error that occurs during the process
+
