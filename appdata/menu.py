@@ -2,7 +2,7 @@
 # AI Chatbot v2  
 # Snake game (possibly planned)  
 # Calendar/Assignments manager  
-# My plans are not fully made yet  
+
 
 # Importing necessary modules  
 from .colors import *  # Importing the entire 'colors' module (rather than specific functions)  
