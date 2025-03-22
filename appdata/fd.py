@@ -9,14 +9,14 @@ from colors import *
 
 image_path = os.path.abspath("appdata\oledbg.gif").strip()
 
-def Slow(text):
+def Slow(text): #animation 30ms default
     delai = 0.03
     lignes = text.split('\n')
     for ligne in lignes:
         print(ligne)
         time.sleep(delai)
      
-if not os.path.exists(image_path):
+if not os.path.exists(image_path): #path does not exist
      print(f"❌ Error: Image file '{image_path}' not found.")
 else:
     def change_windows_terminal_background(image_path):
@@ -26,28 +26,28 @@ else:
             #default terminal path 
             r"~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json")
 
-        if not os.path.exists(settings_path):
+        if not os.path.exists(settings_path): #path does not exist
             print("❌ Error: Windows Terminal settings file not found.")
             return
 
 
-        with open(settings_path, "r", encoding="utf-8") as file:
+        with open(settings_path, "r", encoding="utf-8") as file: #open file
             settings = json.load(file)
 
 
-        default_profile_guid = settings.get("defaultProfile")
+        default_profile_guid = settings.get("defaultProfile") 
 
 
         profiles_list = settings.get("profiles", {}).get("list", [])
-        if not profiles_list:
-            print("❌ Error: No profiles found in settings.json.")
+        if not profiles_list: # does not exist
+            print("❌ Error: No profiles found in settings.json.") 
             return
 
         changed = False
         default_profile_found = False
 
-
-        for profile in profiles_list:
+           
+        for profile in profiles_list: #change settings
             if "backgroundImage" not in profile:
                 print(f"🛠 Adding background settings to profile: {profile.get('name', 'Unnamed Profile')}")
 
@@ -68,9 +68,9 @@ else:
 
         if changed:
 
-            with open(settings_path, "w", encoding="utf-8") as file:
+            with open(settings_path, "w", encoding="utf-8") as file: # if success
                 json.dump(settings, file, indent=4)
-            banner = """
+            banner = """ 
  ░▒▓███████▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓████████▓▒░░▒▓███████▓▒░▒▓███████▓▒░▒▓█▓▒░ 
 ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░     ░▒▓█▓▒░      ░▒▓█▓▒░ 
 ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░     ░▒▓█▓▒░      ░▒▓█▓▒░ 
@@ -81,7 +81,7 @@ else:
             """
             Slow(f"{green}{banner}")
             print(r"{green}✅ SUCCESS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")    
-        else:
+        else: #failed output
             print("⚠️ No changes were made.")
             Slow(f"""{red}                                                                                                                         
 FFFFFFFFFFFFFFFFFFFFFF      AAA               IIIIIIIIIILLLLLLLLLLL             EEEEEEEEEEEEEEEEEEEEEEDDDDDDDDDDDDD         !!! 
