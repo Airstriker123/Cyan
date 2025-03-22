@@ -3,7 +3,7 @@ import webbrowser
 import subprocess
 import sys
 import time
-# same code as essay/flash cards 
+'''CHECK FLASHCARDS FOR COMMENTS SAME CODE! '''
 
 def Slow(text, delay=0.03):
     for line in text.split("\n"):
