@@ -4,9 +4,9 @@ from appdata.banner import *
 from appdata.guide import *   # I got so much errors from trying to import files into parent file (cyan.py)
 from appdata.welcome import *  # fixed by adding a dot ;)
 from appdata.Credits import * 
-
+#set path to welcometext
 welcome_flag_path = os.path.join("appdata", "Welcome_complete.txt")
-sys.stdout.reconfigure(encoding='utf-8')
+sys.stdout.reconfigure(encoding='utf-8') #better encoding for printing text
 
 # if welcome_complete does not exist in path welcome user to app
 if not os.path.exists(welcome_flag_path): 
@@ -37,7 +37,7 @@ def ErrorChoiceStart():
 
 # inputs functions
 # get input from user 
-def app():
+def app(): #dictionary of options
     options = {
         '01': option_01, '02': option_02, '03': option_03, '04': option_04,
         '05': option_05, '06': option_06, '07': option_07, '08': option_08,
@@ -46,8 +46,9 @@ def app():
         '17': option_17, '18': option_18, '19': option_19,
     }
 
-    menu_number = '1'
-    username_pc = os.getlogin()
+    menu_number = '1' #menu number
+    username_pc = os.getlogin() #get pc name
+    #input from user
     choice = input(
         f""" {lc}┌──({purple}{username_pc}{lc}@cyan{lc})─{lc}[{red}~/{os_name}/Menu-{menu_number}{lc}]
  {lc}└─{lc}> {reset}""")
@@ -63,27 +64,27 @@ def app():
         if choice in ['R', 'r', 'reset', 'refresh', 'clear']:
             input(f"{BEFORE + current_time_hour() + AFTER} {INFO} Press enter to continue -> {reset} " + reset)
             main()
-
+         #script path for all my modules 
         script_folder = os.path.abspath(os.path.join(os.path.dirname(__file__), "appdata", "app_functions"))
-
+           # execute option entered condition
         if choice in options and options[choice]:
             script_path = os.path.join(script_folder, f"{options[choice]}.py")
 
             if os.path.exists(script_path):
                 os.system(f"python \"{script_path}\"")
             else:
-                print(f"{red}Error: {blue}{script_path} {red}not found! -_-")
+                print(f"{red}Error: {blue}{script_path} {red}not found! -_-")  # if file not found
 
-        elif '0' + choice in options and options['0' + choice]:
+        elif '0' + choice in options and options['0' + choice]: #if option entered starts with 0
             script_path = os.path.join(script_folder, f"{options['0' + choice]}.py")
 
             if os.path.exists(script_path):
                 os.system(f"python \"{script_path}\"")
             else:
-                print(f"Error: {script_path} not found!")
+                print(f"Error: {script_path} not found!") # if not found
 
         else:
-            ErrorChoiceStart()
+            ErrorChoiceStart() #error
 #Prints error message e.g a filepath is not found in code or could not find a specific module.
     except Exception as e:
         print(f"Error: {e}")
