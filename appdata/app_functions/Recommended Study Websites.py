@@ -1,5 +1,6 @@
 from colors_app import *
 import time 
+import webbrowser
 
 #animation
 def Slow(text, delay=0.03):
