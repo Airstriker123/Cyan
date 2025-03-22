@@ -1,14 +1,13 @@
 from colors_app import *
-import webbrowser
-import time
+import time 
 
-
+#animation
 def Slow(text, delay=0.03):
     for line in text.split("\n"):
         print(line, flush=True)
         time.sleep(delay)
 
-
+#colours for banner
 def MainColor2(text):
     start_color = (0, 200, 150)
     end_color = (0, 255, 255)
@@ -161,6 +160,7 @@ Slow(f"\n{blue}Recommended Study Websites:")
 display()
 open()
 '''
+# dictionary of links
 try:
     links = {
         "Physics": {
@@ -221,31 +221,35 @@ try:
         }
     }
 
+# link formating
+def format_links(links):
+    display_link = ""  # Initialize an empty string to store the formatted links
 
-    def format_links(links):
-        display_link = ""
+    for category, sites in links.items():  # Loop through each category in the dictionary
+        display_link += "\n" + MainColor2(category) + "\n"  # Format the category name using MainColor2
 
-        for category, sites in links.items():
-            display_link += "\n" + MainColor2(category) + "\n"
+        def add_sites(prefix, sites_dict):
+            nonlocal display_link  # Allows modification of display_link within the nested function
 
-            def add_sites(prefix, sites_dict):
-                nonlocal display_link
-                for i, (site, url) in enumerate(sites_dict.items()):
-                    if isinstance(url, dict):
-                        display_link += f"{prefix}├─ {red + site}\n"
-                        add_sites(prefix + "│   ", url)
+            for i, (site, url) in enumerate(sites_dict.items()):  # Loop through each site in the category
+                if isinstance(url, dict):  # If the URL is another dictionary, it's a subcategory
+                    display_link += f"{prefix}├─ {red + site}\n"  # Format the subcategory name
+                    add_sites(prefix + "│   ", url)  # Recursively call add_sites with increased indentation
+                else:  # Otherwise, it's a direct link
+                    if i == len(sites_dict) - 1:  # If it's the last site in the list, use '└─' instead of '├─'
+                        display_link += f"{prefix}└─ {red + site}: {white + url}" + "\n"
                     else:
-                        if i == len(sites_dict) - 1:
-                            display_link += f"{prefix}└─ {red + site}: {white + url}" + "\n"
-                        else:
-                            display_link += f"{prefix}├─ {red + site}: {white + url}" + "\n"
+                        display_link += f"{prefix}├─ {red + site}: {white + url}" + "\n"
 
-            add_sites("", sites)
+        add_sites("", sites)  # Call the recursive function with an empty prefix
 
-        return display_link
+    return display_link  # Return the final formatted string
 
 
-    formatted_links = format_links(links)
-    Slow(study + MainColor2(formatted_links))
+try:
+    formatted_links = format_links(links)  # Generate the formatted string of links
+    Slow(study + MainColor2(formatted_links))  # Display it slowly with color formatting
+
 except Exception as e:
-    print(f'{red}error: {purple}{e}')
+    print(f'{red}error: {purple}{e}')  # Print any errors that occur
+
