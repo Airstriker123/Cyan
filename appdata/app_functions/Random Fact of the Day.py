@@ -74,16 +74,16 @@ def random_fact():
     Slow(fc)
     print(f'{yellow}Fetching fact please wait...')
     try:
-        #In api we trust!
+       
          # endpoint
-        response = requests.get("https://uselessfacts.jsph.pl/random.json?language=en")
+        response = requests.get("https://uselessfacts.jsph.pl/random.json?language=en") #get response from url
         if response.status_code == 200:
         #extract text from api
             fact = response.json()["text"]
             print(f"\n{lc}Random Fact:{white} {fact}")
         else:
             print(f"\n{red}Couldn't fetch a fact, try again later.")
-    except:
+    except: #error
         print(f"\n{red}Network error. Check your internet connection.")
 
 
