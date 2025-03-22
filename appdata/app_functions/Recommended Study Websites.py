@@ -221,39 +221,33 @@ try:
         }
     }
 
-# link formating
-def format_links(links):
-    display_link = ""  # Initialize an empty string to store the formatted links
 
-    for category, sites in links.items():  # Loop through each category in the dictionary
-        display_link += "\n" + MainColor2(category) + "\n"  # Format the category name using MainColor2
+def format_links(links):
+   # Formats a dictionary of categorized links into a structured, colored string for display. 
+    display_link = ""  # Initialize an empty string to store the formatted links
+    for category, sites in links.items():  # Loop through each category of links
+        display_link += "\n" + MainColor2(category) + "\n"  # Add category name with color
 
         def add_sites(prefix, sites_dict):
-            nonlocal display_link  # Allows modification of display_link within the nested function
-
+          # Recursively processes the nested dictionary of sites, adding them with proper indentation.
+            nonlocal display_link  # Allows modification of the display_link variable from the outer scope
             for i, (site, url) in enumerate(sites_dict.items()):  # Loop through each site in the category
-                if isinstance(url, dict):  # If the URL is another dictionary, it's a subcategory
-                    display_link += f"{prefix}├─ {red + site}\n"  # Format the subcategory name
-                    add_sites(prefix + "│   ", url)  # Recursively call add_sites with increased indentation
-                else:  # Otherwise, it's a direct link
-                    if i == len(sites_dict) - 1:  # If it's the last site in the list, use '└─' instead of '├─'
+                if isinstance(url, dict):  # Check if the URL is another dictionary (nested structure)
+                    display_link += f"{prefix}├─ {red + site}\n"  # Add site name with color
+                    add_sites(prefix + "│   ", url)  # Recursively call for nested links
+                else:
+                    if i == len(sites_dict) - 1:  # If it's the last site in the list, use '└─' (final branch)
                         display_link += f"{prefix}└─ {red + site}: {white + url}" + "\n"
-                    else:
+                    else:  # Otherwise, use '├─' to indicate more items follow
                         display_link += f"{prefix}├─ {red + site}: {white + url}" + "\n"
+        add_sites("", sites)  # Start processing the category sites
 
-        add_sites("", sites)  # Call the recursive function with an empty prefix
-
-    return display_link  # Return the final formatted string
-
-except exception as e:
-  print(f'{red}error: {purple}{e}')
-
-try:
-    formatted_links = format_links(links)  # Generate the formatted string of links
-    Slow(study + MainColor2(formatted_links))  # Display it slowly with color formatting
-
+    return display_link  # Return the formatted string of links
+# Call the function to format the links and store the result
+formatted_links = format_links(links)
+# Display the formatted links using slow animated text with color formatting
+Slow(study + MainColor2(formatted_links))
+# Handle any errors that might occur during execution
 except Exception as e:
-    print(f'{red}error: {purple}{e}')  # Print any errors that occur
-
-format_links(links)
+    print(f'{red}error: {purple}{e}')  # Print error message with color formatting
 
