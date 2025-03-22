@@ -1,8 +1,8 @@
-from rich.console import Console
+from rich.console import Console # using rich for tables
 from rich.panel import Panel
 import time
 import requests
-from rich.table import Table
+from rich.table import Table 
 
 console = Console() #function from rich
 
