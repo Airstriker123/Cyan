@@ -4,9 +4,9 @@ import time
 import requests
 from rich.table import Table
 
-console = Console()
+console = Console() #function from rich
 
-#webhook url
+#webhook url for sending feedback
 WEBHOOK = "https://discord.com/api/webhooks/1342459198738530356/_C7tE93oc0XcLbXeIf7n4QR9zc5bXsuFYIHqplL3SBokc0zaNv9BmN0UY6gzDIlyCudD"
 
 #function to print contributions
@@ -26,7 +26,7 @@ def send_feedback(feedback):
     else:
         console.print("[bold red]❌ Failed to send feedback.[/] Please try again later.")
 #main function 
-def show_credits():
+def show_credits(): #everythigng that will be printed in terminal
     console.clear()
     console.print(Panel.fit("[bold magenta]Cyan - Multi-tool for Students[/]", style="cyan"))
     console.print("\n[bold green]Developed by:[/] Amit Singh\n", justify="left")
