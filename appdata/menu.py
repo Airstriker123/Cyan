@@ -62,18 +62,18 @@ option_next_txt = option_next + f" {cyan}[{white}C{cyan}]{white}"
 option_site_txt = f"{cyan}[{white}R{cyan}]{white} " + option_site  
 option_info_txt = f"{cyan}[{white}H{cyan}]{white} " + option_info  
 
-# Creating the menu layout with properly aligned text  
-menu1 = f""" ┌─{option_site_txt}                                                                                             {option_next_txt}─┐  
- ├─{option_info_txt}  ┌─────────────────┐                        ┌───────┐                           ┌───────────┐            │  
- └─┬─────────┤ General tools   ├─────────┬──────────────┤ Study ├──────────────┬────────────┤ Utilities ├────────────┴─  
-   │         └─────────────────┘         │              └───────┘              │            └───────────┘  
-   ├─ {option_01_txt}├─ {option_07_txt}├─ {option_14_txt}  
-   ├─ {option_02_txt}├─ {option_08_txt}├─ {option_15_txt}  
-   ├─ {option_03_txt}├─ {option_09_txt}├─ {option_16_txt}  
-   ├─ {option_04_txt}├─ {option_10_txt}├─ {option_17_txt}  
-   ├─ {option_05_txt}├─ {option_11_txt}├─ {option_18_txt}  
-   └─ {option_06_txt}├─ {option_12_txt}└─ {option_19_txt}  
-                                         └─ {option_13_txt}  
+#menu display
+menu1 = f""" ┌─{option_site_txt}                                                                                             {option_next_txt}─┐
+ ├─{option_info_txt      }  ┌─────────────────┐                        ┌───────┐                           ┌───────────┐            │
+ └─┬─────────┤ General tools   ├─────────┬──────────────┤ Study ├──────────────┬────────────┤ Utilities ├────────────┴─
+   │         └─────────────────┘         │              └───────┘              │            └───────────┘
+   ├─ {option_01_txt                    }├─ {option_07_txt                    }├─ {option_14_txt}
+   ├─ {option_02_txt                    }├─ {option_08_txt                    }├─ {option_15_txt}
+   ├─ {option_03_txt                    }├─ {option_09_txt                    }├─ {option_16_txt}
+   ├─ {option_04_txt                    }├─ {option_10_txt                    }├─ {option_17_txt}
+   ├─ {option_05_txt                    }├─ {option_11_txt                    }├─ {option_18_txt}
+   └─ {option_06_txt                    }├─ {option_12_txt                    }└─ {option_19_txt}
+                                         └─ {option_13_txt                    }
 
 """
 
@@ -120,3 +120,12 @@ def MainColor(menu1):
 # Function to display the menu with a slow effect  
 def menu():  
     Slow((MainColor(menu1)))  
+
+
+
+
+
+
+
+
+
