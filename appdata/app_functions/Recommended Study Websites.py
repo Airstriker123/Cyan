@@ -1,15 +1,14 @@
 
-from colors_app import *
-import webbrowser
+from colors_app import * # colors
 import time
 
-
+#animation
 def Slow(text, delay=0.03):
     for line in text.split("\n"):
         print(line, flush=True)
         time.sleep(delay)
 
-
+#color for banner
 def MainColor2(text):
     start_color = (0, 200, 150)
     end_color = (0, 255, 255)
@@ -162,6 +161,7 @@ Slow(f"\n{blue}Recommended Study Websites:")
 display()
 open()
 '''
+#links of sites 
 try:
     links = {
         "Physics": {
@@ -222,31 +222,31 @@ try:
         }
     }
 
-
+ 
     def format_links(links):
-        display_link = ""
-
+        display_link = "" #empty string for formated links
+       # loop to print all items in links
         for category, sites in links.items():
             display_link += "\n" + MainColor2(category) + "\n"
-
+               
             def add_sites(prefix, sites_dict):
-                nonlocal display_link
-                for i, (site, url) in enumerate(sites_dict.items()):
-                    if isinstance(url, dict):
-                        display_link += f"{prefix}├─ {red + site}\n"
+                nonlocal display_link  # Allows modification of the display_link variable from the outer scope
+                for i, (site, url) in enumerate(sites_dict.items()): 
+                    if isinstance(url, dict):  # Check if the URL is another dictionary (nested structure)
+                        display_link += f"{prefix}├─ {red + site}\n" 
                         add_sites(prefix + "│   ", url)
                     else:
-                        if i == len(sites_dict) - 1:
+                        if i == len(sites_dict) - 1:  # If it's the last site in the list, use '└─' (final branch)
                             display_link += f"{prefix}└─ {red + site}: {white + url}" + "\n"
                         else:
-                            display_link += f"{prefix}├─ {red + site}: {white + url}" + "\n"
+                            display_link += f"{prefix}├─ {red + site}: {white + url}" + "\n"  # Otherwise, use '├─' to indicate more items follow
 
-            add_sites("", sites)
+            add_sites("", sites) 
 
         return display_link
 
 
     formatted_links = format_links(links)
-    Slow(study + MainColor2(formatted_links))
+    Slow(study + MainColor2(formatted_links)) #call function 
 except Exception as e:
-    print(f'{red}error: {purple}{e}')
+    print(f'{red}error: {purple}{e}') #error catching
