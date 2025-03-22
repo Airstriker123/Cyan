@@ -1,4 +1,3 @@
-
 from colors_app import *
 import webbrowser
 import time
