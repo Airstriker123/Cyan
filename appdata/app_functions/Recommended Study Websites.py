@@ -245,6 +245,8 @@ def format_links(links):
 
     return display_link  # Return the final formatted string
 
+except exception as e:
+  print(f'{red}error: {purple}{e}')
 
 try:
     formatted_links = format_links(links)  # Generate the formatted string of links
@@ -252,4 +254,6 @@ try:
 
 except Exception as e:
     print(f'{red}error: {purple}{e}')  # Print any errors that occur
+
+format_links(links)
 
