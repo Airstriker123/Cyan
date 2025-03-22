@@ -1,16 +1,16 @@
 import os
-import webbrowser
-from colors_app import *
-import time
+import webbrowser #url open
+from colors_app import * #color values
+import time  
 
-
+#animation 
 def Slow(text, delay=0.03):
     for line in text.split("\n"):
         print(line, flush=True)
         time.sleep(delay)
 
-
-def MainColor2(text):
+#color gradient for banner
+def MainColor2(text): 
     start_color = (0, 200, 150)
     end_color = (0, 255, 255)
 
@@ -80,9 +80,9 @@ cal = MainColor2(r"""
        ███████████████████████████████████████████████████████████████       
 
 """)
-Slow(cal)
-Slow(f"{purple}Opening google calendar...")
-webbrowser.open("https://calendar.google.com/")
+Slow(cal) #printed text
+Slow(f"{purple}Opening google calendar...") #printed text
+webbrowser.open("https://calendar.google.com/") #run url
 
 
 
