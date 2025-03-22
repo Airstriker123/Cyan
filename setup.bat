@@ -30,6 +30,7 @@ choice /c YN /m "Do you want to install these modules?"
 if errorlevel 2 exit /b
 
 color 2
+:: install modules command
 echo Installing Python modules...
 pip install --upgrade pip
 pip install -r appdata/requirements.txt
