@@ -5,10 +5,12 @@ HOW TO USE APP:
 4. input the corresponding number listed to the menu option e.g. "1" and press enter to execute.
 5. enjoy!
 
+NOTE: First time setup make take a few minutes.
 
 NOTE: once you open setup once you do not have to open it again and can just open cyan.py!/start.bat
 
-NOTE: YouTube video (mp3/mp4) downloader might not work on the school
-network! (most likely because of proxy so use it on your own network and it should work fine.)
+
+
+
 
 
