@@ -98,6 +98,8 @@ AI =  MainColor2(r"""
 """)
 
 # I should obfuscate the keys 
+# api keys for auth 
+##############################################################################################################
 api_keys = {
     "3f493a0d62df472bbe2efda6d4b2bbf9",
     "451d904cff5b4e25886acbef9d58d42d",
@@ -107,7 +109,7 @@ api_keys = {
     "e7711e86290a454c99431fd3f2e1a4d1",
 }
 api_url = "https://api.aimlapi.com/v1/chat/completions"
-
+##############################################################################################################
 def type_text(text, delay=0.05):
     for char in text:
         sys.stdout.write(char)
