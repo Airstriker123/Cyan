@@ -50,8 +50,8 @@
 
 ## 🛠️ Installation
 
-```bash
-git clone https://github.com/your-username/cyan-tool.git
+```bash/cmd
+https://github.com/Airstriker123/Cyan.git
 cd cyan-tool
 start setup.bat
 
