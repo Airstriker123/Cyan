@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/your-username/your-repo-name/raw/main/assets/banner.png" alt="Cyan Tool" width="700"/>
+  <img src="https://github.com/Airstriker123/Cyan/blob/Main/appdata/images/banner.png" alt="Cyan Tool" width="700"/>
 
   # 🧊 CYAN TOOL
   _An aesthetic terminal-based productivity toolkit for students and developers._
@@ -40,9 +40,9 @@
 
 ---
 
-## 🎨 UI Preview
+## 🎨 Feature Preview
 
-> ![cyan-tool-preview](./appdata/images/banner.png)
+> ![cyan-tool-preview](./appdata/images/image.png)
 
 **Retro terminal vibe with neon aesthetics and clear category separation.**
 
@@ -53,5 +53,5 @@
 ```bash
 git clone https://github.com/your-username/cyan-tool.git
 cd cyan-tool
-python3 main.py
+start setup.bat
 
