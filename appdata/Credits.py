@@ -32,10 +32,10 @@ def show_credits(): #everythigng that will be printed in terminal
     console.print("\n[bold green]Developed by:[/] Amit Singh\n", justify="left")
 
     contributions = [
-        "Lead Developer: Amit Singh",
+        "Lead Developer: Airstriker",
         "GitHub: [link=https://github.com/Airstriker123]github.com/Airstriker123[/link] 🚀",
-        "Design & UX: Amit Singh",
-        "Programming: Amit Singh",
+        "Design & UX: Airstriker",
+        "Programming: Airsriker",
         "Tested on 3 computers 💯"
     ]
     animated_list(contributions) #function printed
