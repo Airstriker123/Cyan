@@ -126,7 +126,7 @@ x = input(f'{yellow}Enter option {blue}(1,2):{red} ')
 # Function to open a website in the browser
 def website():
     print(f'{yellow}Opening web browser:')
-    webbrowser.open("https://shepherd.study")  # Open the flashcard website
+    webbrowser.open("https://quizlet.com/au")  # Open the flashcard website
     print(f'{green}Success!')
 
 # Function to send a message to the AI service and handle the response
