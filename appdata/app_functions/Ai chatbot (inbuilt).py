@@ -97,8 +97,8 @@ AI =  MainColor2(r"""
 
 """)
 
-# I should obfuscate the keys 
 # api keys for auth 
+#get keys at: https://aimlapi.com/
 ##############################################################################################################
 api_keys = {
     "3f493a0d62df472bbe2efda6d4b2bbf9",
