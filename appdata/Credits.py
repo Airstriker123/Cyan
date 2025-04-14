@@ -29,7 +29,7 @@ def send_feedback(feedback):
 def show_credits(): #everythigng that will be printed in terminal
     console.clear()
     console.print(Panel.fit("[bold magenta]Cyan - Multi-tool for Students[/]", style="cyan"))
-    console.print("\n[bold green]Developed by:[/] Amit Singh\n", justify="left")
+    console.print("\n[bold green]Developed by:[/] Airstriker \n", justify="left")
 
     contributions = [
         "Lead Developer: Airstriker",
