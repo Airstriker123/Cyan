@@ -126,7 +126,7 @@ def first_time_run():
     Slow(f"{faded_text}\n")  # Display banner with a slow effect
 
     # Display a security warning
-    type_text(f"{red}[{yellow}❗{red}]{yellow} ⚠️ WARNING:{red} THIS APP CONTAINS {purple}API KEYS!{red} DO NOT{white}{red} SHARE OR SHOW THESE KEYS TO OTHERS!\n", 0.0009999999999)
+    type_text(f"{red}[{yellow}❗{red}]{yellow} ⚠️ WARNING:{red} Api keys is not included it this version!\n", 0.0009999999999)
     print(f'{purple}========================================================================================================================\n')
 
     # Call welcome function to greet the user
